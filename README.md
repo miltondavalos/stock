@@ -23,11 +23,11 @@ Without stock:
 With stock:
 
     When /^I do my important Cucumber step thing$/ do
-     	stock. = ‘’
+     	stock.thing_i_can_now_keep_track_of = ‘predictable’
     end
 
     When /^I do my other important Cucumber step without knowing what’s in stock$/ do
-    	stock. = ‘’
+    	stock.thing_i_can_now_keep_track_of = ‘predictable’
 	# raises a warning when overriding a variable that is ‘in stock’ 
     end
 
