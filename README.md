@@ -1,11 +1,11 @@
-Stock Helper
+Stock
 ==
 
 Looking for an alternative to using instance variables across steps in Cucumber?
 
-# Example Usages
+# Example Usage
 
-**An alternative to having a whole bunch instance variables with unknown values polluting your steps**
+**As an alternative to having a whole bunch instance variables with unknown values polluting your steps**
 
 Without stock:
 
