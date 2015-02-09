@@ -10,14 +10,13 @@ Looking for an alternative to using instance variables across steps in Cucumber?
 Without stock:
 
      When /^I do my important Cucumber step thing$/ do
-     	@my_instance_variable = ‘something I do not want to change’
+     	@my_instance_variable = ‘some instance variable that will pollute my steps’
      end
 
      When /^I do my other important Cucumber step without knowing what’s in my instance variables$/ do
-     	@my_instance_variable = ‘I should not be changing this.’
+     	@my_instance_variable = ‘another value for my instance variable that is polluting my steps’
      end
 
-- I execute the steps and I get no warning
 - I have any number of instance variables that have an unknown state
 
 With stock:
@@ -28,10 +27,9 @@ With stock:
 
     When /^I do my other important Cucumber step without knowing what’s in stock$/ do
     	stock.thing_i_can_now_keep_track_of = ‘predictable’
-	# raises a warning when overriding a variable that is ‘in stock’ 
     end
 
-- I execute the steps and get a warning when a variable in stock is used more than once
+- I am not using instance variables across steps and can now clear everything in stock easily. See below.
 
 **Making a teardown that easily clears variables between steps**
 
